@@ -12,23 +12,3 @@ myImage.onclick = () => {
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("p");
 
-function setUserName() {
-    const myName = prompt("Please enter your name.");
-    if (!myName) {
-        setUserName();
-    } else {
-        localStorage.setItem("name", myName);
-    myHeading.textContent = 'Mobile phone is amazing, ${myName}';
-    }
-    
-}
-if (!localStorage.getItem("name")) {
-    setUserName();
-  } else {
-    const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mobile phone is amazing, ${storedName}`;
-  }
-  myButton.onclick = () => {
-    setUserName();
-  };
-
